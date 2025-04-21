@@ -12,7 +12,7 @@ const HomePage = () => {
       </div>
       <div className="container relative flex flex-col justify-center h-full px-4 mx-auto">
         <h1 className="max-w-2xl mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-          Modern Villas in the woods.
+          Modern Villas in the world.
         </h1>
         <p className="max-w-xl mb-8 text-lg text-gray-200 md:text-xl">
           Discover the perfect harmony of luxury and nature with our exclusive

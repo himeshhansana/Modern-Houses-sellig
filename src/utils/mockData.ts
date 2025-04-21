@@ -1,3 +1,16 @@
+import Home1 from "../assets/home1.jpg";
+import Home2 from "../assets//Home2.jpg";
+import Home3 from "../assets/Home 3.jpg";
+import Home4 from "../assets/Home 5.jpg";
+import Home5 from "../assets/Home 6.jpg";
+import Home6 from "../assets/Home 7.jpg";
+import Home7 from "../assets/Home 8.jpg";
+import Home8 from "../assets/Home 9.jpg";
+import Home9 from "../assets/Home 10.jpg";
+import Home10 from "../assets/Home 11.jpg";
+import Home11 from "../assets/Home 12.jpg";
+
+
 export interface Property {
   id: number; // Changed from string to number
   title: string;
@@ -27,11 +40,7 @@ export const properties: Property[] = [
     type: "Villa",
     status: "For Sale",
     featured: true,
-    images: [
-      "/image.png",
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    ],
+    images: [Home1, Home2, Home3],
     amenities: ["Pool", "Sauna", "Home Theater", "Smart Home System", "Private Garden"]
   },
   {
@@ -46,11 +55,7 @@ export const properties: Property[] = [
     type: "Estate",
     status: "For Sale",
     featured: true,
-    images: [
-      "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600607687644-c7f34b5063c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    ],
+    images: [Home4, Home5, Home6],
     amenities: ["Infinity Pool", "Private Dock", "Wine Cellar", "Gym", "Guest House"]
   },
   {
@@ -65,11 +70,7 @@ export const properties: Property[] = [
     type: "Villa",
     status: "For Sale",
     featured: true,
-    images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    ],
+    images: [Home7, Home8, Home9],
     amenities: ["Hot Tub", "Fireplace", "Heated Floors", "Home Office", "Ski Room"]
   },
   {
@@ -84,11 +85,7 @@ export const properties: Property[] = [
     type: "Villa",
     status: "For Sale",
     featured: false,
-    images: [
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    ],
+    images: [Home10, Home11, Home1],
     amenities: ["Beachfront", "Outdoor Kitchen", "Infinity Pool", "Smart Home System", "Private Terrace"]
   },
   {
@@ -103,11 +100,7 @@ export const properties: Property[] = [
     type: "Penthouse",
     status: "For Sale",
     featured: false,
-    images: [
-      "https://images.unsplash.com/photo-1600607687126-8a3bfb8d8094?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600607687644-c7f34b5063c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    ],
+    images: [Home2, Home3, Home4],
     amenities: ["Rooftop Terrace", "Private Elevator", "Wine Cellar", "Gym Access", "Concierge Service"]
   },
   {
@@ -122,11 +115,7 @@ export const properties: Property[] = [
     type: "Villa",
     status: "For Sale",
     featured: false,
-    images: [
-      "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-    ],
+    images: [Home5, Home6, Home7],
     amenities: ["Courtyard Pool", "Outdoor Fireplace", "Casita", "Desert Landscaping", "Solar Power"]
   }
 ];

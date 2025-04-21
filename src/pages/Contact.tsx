@@ -1,3 +1,6 @@
+
+import home7 from '../assets/Home 7.jpg';
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPinIcon, PhoneIcon, MailIcon, ClockIcon, CheckCircleIcon, FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon } from 'lucide-react';
@@ -54,9 +57,9 @@ const Contact = () => {
       duration: 0.6
     }} className="relative h-[400px] bg-gray-900 text-white">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1600607687644-c7f34b5063c7" alt="Contact Us" className="w-full h-full object-cover opacity-50" />
+          <img src={home7} alt="Contact Us" className="object-cover w-full h-full opacity-50" />
         </div>
-        <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
+        <div className="container relative flex flex-col justify-center h-full px-4 mx-auto">
           <motion.h1 initial={{
           opacity: 0,
           y: 30
@@ -66,7 +69,7 @@ const Contact = () => {
         }} transition={{
           delay: 0.2,
           duration: 0.6
-        }} className="text-4xl md:text-5xl font-bold mb-4">
+        }} className="mb-4 text-4xl font-bold md:text-5xl">
             Contact Us
           </motion.h1>
           <motion.p initial={{
@@ -78,75 +81,75 @@ const Contact = () => {
         }} transition={{
           delay: 0.4,
           duration: 0.6
-        }} className="text-xl max-w-2xl">
+        }} className="max-w-2xl text-xl">
             Get in touch with our team of luxury real estate experts
           </motion.p>
         </div>
       </motion.section>
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="container px-4 py-16 mx-auto">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Contact Form */}
           <motion.div initial="hidden" animate="visible" variants={fadeIn} transition={{
           duration: 0.6
         }}>
-            <h2 className="text-3xl font-bold mb-8">Send Us a Message</h2>
+            <h2 className="mb-8 text-3xl font-bold">Send Us a Message</h2>
             {isSubmitted ? <motion.div initial={{
             opacity: 0,
             scale: 0.8
           }} animate={{
             opacity: 1,
             scale: 1
-          }} className="bg-emerald-50 p-8 rounded-lg text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full mb-4">
+          }} className="p-8 text-center rounded-lg bg-emerald-50">
+                <div className="inline-flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-emerald-100 text-emerald-600">
                   <CheckCircleIcon size={32} />
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
+                <h3 className="mb-2 text-2xl font-bold">Thank You!</h3>
                 <p className="text-gray-600">
                   Your message has been sent successfully. We'll get back to you
                   soon.
                 </p>
               </motion.div> : <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <motion.div variants={fadeIn} transition={{
                 delay: 0.1
               }}>
-                    <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="name">
+                    <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="name">
                       Your Name
                     </label>
-                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-colors" placeholder="John Doe" />
+                    <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-3 transition-colors border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="John Doe" />
                   </motion.div>
                   <motion.div variants={fadeIn} transition={{
                 delay: 0.2
               }}>
-                    <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="email">
+                    <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="email">
                       Email Address
                     </label>
-                    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-colors" placeholder="john@example.com" />
+                    <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 transition-colors border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="john@example.com" />
                   </motion.div>
                 </div>
                 <motion.div variants={fadeIn} transition={{
               delay: 0.3
             }}>
-                  <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="phone">
+                  <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="phone">
                     Phone Number
                   </label>
-                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-colors" placeholder="+1 (555) 000-0000" />
+                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 transition-colors border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="+1 (555) 000-0000" />
                 </motion.div>
                 <motion.div variants={fadeIn} transition={{
               delay: 0.4
             }}>
-                  <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="subject">
+                  <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="subject">
                     Subject
                   </label>
-                  <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-colors" placeholder="How can we help you?" />
+                  <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required className="w-full px-4 py-3 transition-colors border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="How can we help you?" />
                 </motion.div>
                 <motion.div variants={fadeIn} transition={{
               delay: 0.5
             }}>
-                  <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="message">
+                  <label className="block mb-2 text-sm font-medium text-gray-700" htmlFor="message">
                     Message
                   </label>
-                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition-colors" placeholder="Your message here..." />
+                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className="w-full px-4 py-3 transition-colors border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" placeholder="Your message here..." />
                 </motion.div>
                 <motion.button variants={fadeIn} transition={{
               delay: 0.6
@@ -154,7 +157,7 @@ const Contact = () => {
               scale: 1.02
             }} whileTap={{
               scale: 0.98
-            }} type="submit" className="w-full bg-emerald-600 text-white py-3 px-6 rounded-lg hover:bg-emerald-700 transition-colors">
+            }} type="submit" className="w-full px-6 py-3 text-white transition-colors rounded-lg bg-emerald-600 hover:bg-emerald-700">
                   Send Message
                 </motion.button>
               </form>}
@@ -165,7 +168,7 @@ const Contact = () => {
             duration: 0.6,
             delay: 0.2
           }}>
-              <h2 className="text-3xl font-bold mb-8">Our Offices</h2>
+              <h2 className="mb-8 text-3xl font-bold">Our Offices</h2>
               <div className="space-y-8">
                 {offices.map((office, index) => <motion.div key={index} initial={{
                 opacity: 0,
@@ -175,21 +178,21 @@ const Contact = () => {
                 x: 0
               }} transition={{
                 delay: 0.3 + index * 0.1
-              }} className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-xl font-bold mb-4">{office.city}</h3>
+              }} className="p-6 rounded-lg bg-gray-50">
+                    <h3 className="mb-4 text-xl font-bold">{office.city}</h3>
                     <div className="space-y-3">
                       <div className="flex items-start">
-                        <MapPinIcon className="w-5 h-5 text-emerald-600 mt-1 mr-3" />
+                        <MapPinIcon className="w-5 h-5 mt-1 mr-3 text-emerald-600" />
                         <span>{office.address}</span>
                       </div>
                       <div className="flex items-center">
-                        <PhoneIcon className="w-5 h-5 text-emerald-600 mr-3" />
+                        <PhoneIcon className="w-5 h-5 mr-3 text-emerald-600" />
                         <a href={`tel:${office.phone}`} className="hover:text-emerald-600">
                           {office.phone}
                         </a>
                       </div>
                       <div className="flex items-center">
-                        <MailIcon className="w-5 h-5 text-emerald-600 mr-3" />
+                        <MailIcon className="w-5 h-5 mr-3 text-emerald-600" />
                         <a href={`mailto:${office.email}`} className="hover:text-emerald-600">
                           {office.email}
                         </a>
@@ -206,9 +209,9 @@ const Contact = () => {
             }} transition={{
               delay: 0.8
             }} className="mt-12">
-                <h3 className="text-xl font-bold mb-4">Business Hours</h3>
+                <h3 className="mb-4 text-xl font-bold">Business Hours</h3>
                 <div className="flex items-start mb-4">
-                  <ClockIcon className="w-5 h-5 text-emerald-600 mt-1 mr-3" />
+                  <ClockIcon className="w-5 h-5 mt-1 mr-3 text-emerald-600" />
                   <div>
                     <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                     <p>Saturday: 10:00 AM - 4:00 PM</p>
@@ -225,18 +228,18 @@ const Contact = () => {
             }} transition={{
               delay: 0.9
             }} className="mt-8">
-                <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+                <h3 className="mb-4 text-xl font-bold">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="text-gray-600 hover:text-emerald-600 transition-colors">
+                  <a href="#" className="text-gray-600 transition-colors hover:text-emerald-600">
                     <FacebookIcon size={24} />
                   </a>
-                  <a href="#" className="text-gray-600 hover:text-emerald-600 transition-colors">
+                  <a href="#" className="text-gray-600 transition-colors hover:text-emerald-600">
                     <TwitterIcon size={24} />
                   </a>
-                  <a href="#" className="text-gray-600 hover:text-emerald-600 transition-colors">
+                  <a href="#" className="text-gray-600 transition-colors hover:text-emerald-600">
                     <InstagramIcon size={24} />
                   </a>
-                  <a href="#" className="text-gray-600 hover:text-emerald-600 transition-colors">
+                  <a href="#" className="text-gray-600 transition-colors hover:text-emerald-600">
                     <LinkedinIcon size={24} />
                   </a>
                 </div>
