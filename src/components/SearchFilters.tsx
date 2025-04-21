@@ -31,41 +31,41 @@ const SearchFilters = ({
     e.preventDefault();
     onFilterChange(filters);
   };
-  return <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+  return <div className="p-6 mb-8 bg-white rounded-lg shadow-md">
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row md:items-center gap-4">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center">
           <div className="relative flex-grow">
-            <SearchIcon className="absolute left-3 top-3 text-gray-400" size={20} />
-            <input type="text" name="keyword" placeholder="Search by location, property name..." className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none" value={filters.keyword} onChange={handleChange} />
+            <SearchIcon className="absolute text-gray-400 left-3 top-3" size={20} />
+            <input type="text" name="keyword" placeholder="Search by location, property name..." className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" value={filters.keyword} onChange={handleChange} />
           </div>
-          <button type="button" className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg md:w-auto" onClick={() => setIsExpanded(!isExpanded)}>
+          <button type="button" className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 md:w-auto" onClick={() => setIsExpanded(!isExpanded)}>
             <SlidersIcon size={18} />
             <span>Filters</span>
           </button>
-          <button type="submit" className="px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-colors">
+          <button type="submit" className="px-6 py-2 text-white transition-colors rounded-lg bg-emerald-600 hover:bg-emerald-700">
             Search
           </button>
         </div>
-        {isExpanded && <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-            <div className="flex flex-col md:flex-row md:items-center gap-4">
+        {isExpanded && <div className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-3">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center">
               <div className="w-full md:w-1/2">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block mb-1 text-sm font-medium text-gray-700">
                   Min Price
                 </label>
-                <input type="number" name="minPrice" placeholder="Min" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none" value={filters.minPrice} onChange={handleChange} />
+                <input type="number" name="minPrice" placeholder="Min" className="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" value={filters.minPrice} onChange={handleChange} />
               </div>
               <div className="w-full md:w-1/2">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block mb-1 text-sm font-medium text-gray-700">
                   Max Price
                 </label>
-                <input type="number" name="maxPrice" placeholder="Max" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none" value={filters.maxPrice} onChange={handleChange} />
+                <input type="number" name="maxPrice" placeholder="Max" className="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" value={filters.maxPrice} onChange={handleChange} />
               </div>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block mb-1 text-sm font-medium text-gray-700">
                 Bedrooms
               </label>
-              <select name="bedrooms" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none" value={filters.bedrooms} onChange={handleChange}>
+              <select name="bedrooms" className="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" value={filters.bedrooms} onChange={handleChange}>
                 <option value="">Any</option>
                 <option value="1">1+</option>
                 <option value="2">2+</option>
@@ -75,10 +75,10 @@ const SearchFilters = ({
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block mb-1 text-sm font-medium text-gray-700">
                 Bathrooms
               </label>
-              <select name="bathrooms" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none" value={filters.bathrooms} onChange={handleChange}>
+              <select name="bathrooms" className="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" value={filters.bathrooms} onChange={handleChange}>
                 <option value="">Any</option>
                 <option value="1">1+</option>
                 <option value="2">2+</option>
@@ -88,10 +88,10 @@ const SearchFilters = ({
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block mb-1 text-sm font-medium text-gray-700">
                 Property Type
               </label>
-              <select name="propertyType" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none" value={filters.propertyType} onChange={handleChange}>
+              <select name="propertyType" className="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" value={filters.propertyType} onChange={handleChange}>
                 <option value="">Any</option>
                 <option value="Villa">Villa</option>
                 <option value="Estate">Estate</option>

@@ -2,40 +2,68 @@ import { Link } from 'react-router-dom';
 import { ArrowRightIcon, SearchIcon, HomeIcon, KeyIcon, CheckCircleIcon } from 'lucide-react';
 import { properties, Property } from '../utils/mockData';
 import PropertyCard from '../components/PropertyCard';
+import { motion } from 'framer-motion';
+
 const HomePage = () => {
   const featuredProperties = properties.filter((property: Property) => property.featured).slice(0, 3);
   return <div className="w-full bg-white">
     {/* Hero Section */}
     <section className="relative h-[600px] bg-gray-900 text-white">
       <div className="absolute inset-0">
-        <img src="/image.png" alt="Modern Villa" className="object-cover w-full h-full opacity-60" />
+        <img
+          src="/image.png"
+          alt="Modern Villa"
+          className="object-cover w-full h-full opacity-60" />
       </div>
+
       <div className="container relative flex flex-col justify-center h-full px-4 mx-auto">
-        <h1 className="max-w-2xl mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
+        <motion.h1
+          className="max-w-2xl mb-4 text-4xl font-bold md:text-5xl lg:text-6xl"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}>
           Modern Villas in the world.
-        </h1>
-        <p className="max-w-xl mb-8 text-lg text-gray-200 md:text-xl">
+        </motion.h1>
+
+        <motion.p
+          className="max-w-xl mb-8 text-lg text-gray-200 md:text-xl"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}>
           Discover the perfect harmony of luxury and nature with our exclusive
           collection of modern woodland villas.
-        </p>
-        <div className="flex flex-col gap-4 sm:flex-row">
-          <Link to="/listings" className="inline-flex items-center justify-center px-8 py-3 font-medium text-white transition-colors rounded-full bg-emerald-600 hover:bg-emerald-700">
+        </motion.p>
+
+        <motion.div
+          className="flex flex-col gap-4 sm:flex-row"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}>
+          <Link
+            to="/listings"
+            className="inline-flex items-center justify-center px-8 py-3 font-medium text-white transition-colors rounded-full bg-emerald-600 hover:bg-emerald-700">
             Browse Properties
           </Link>
-          <Link to="/add-property" className="inline-flex items-center justify-center px-8 py-3 font-medium text-gray-900 transition-colors bg-white rounded-full hover:bg-gray-100">
+          <Link
+            to="/add-property"
+            className="inline-flex items-center justify-center px-8 py-3 font-medium text-gray-900 transition-colors bg-white rounded-full hover:bg-gray-100">
             Sell Your Property
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
-    {/* Search Section */}
+
+    {/*  Search Section */}
     <section className="container relative z-10 px-4 py-8 mx-auto -mt-24">
-      <div className="p-6 bg-white rounded-lg shadow-xl">
+      <div className="p-6 rounded-lg shadow-xl bg-white/70 backdrop-blur-md">
         <h2 className="mb-4 text-xl font-bold">Find Your Dream Property</h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
           <div className="relative">
             <SearchIcon className="absolute text-gray-400 left-3 top-3" size={20} />
-            <input type="text" placeholder="Location" className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
+            <input
+              type="text"
+              placeholder="Location"
+              className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500" />
           </div>
           <div>
             <select className="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500">
@@ -55,13 +83,16 @@ const HomePage = () => {
             </select>
           </div>
           <div>
-            <Link to="/listings" className="inline-flex items-center justify-center w-full px-4 py-2 text-white transition-colors rounded-lg bg-emerald-600 hover:bg-emerald-700">
+            <Link
+              to="/listings"
+              className="inline-flex items-center justify-center w-full px-4 py-2 text-white transition-colors rounded-lg bg-emerald-600 hover:bg-emerald-700">
               Search
             </Link>
           </div>
         </div>
       </div>
     </section>
+
     {/* Featured Properties */}
     <section className="container px-4 py-16 mx-auto">
       <div className="flex items-center justify-between mb-8">
@@ -71,7 +102,17 @@ const HomePage = () => {
         </Link>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {featuredProperties.map((property: Property) => <PropertyCard key={property.id} id={property.id} title={property.title} location={property.location} price={property.price} bedrooms={property.bedrooms} bathrooms={property.bathrooms} area={property.area} images={property.images} featured={property.featured} />)}
+        {featuredProperties.map((property: Property) => <PropertyCard
+          key={property.id}
+          id={property.id}
+          title={property.title}
+          location={property.location}
+          price={property.price}
+          bedrooms={property.bedrooms}
+          bathrooms={property.bathrooms}
+          area={property.area}
+          images={property.images}
+          featured={property.featured} />)}
       </div>
     </section>
     {/* Why Choose Us */}
